@@ -428,6 +428,14 @@ function App(props) {
       <ThemeSwitch />
 
       {/* 👨‍💼 Your account is in the top right with a wallet at connect options */}
+      <Button
+        align="middle"
+        onClick={() => {
+          tx(writeContracts.YourContract.setPurpose("👋 Hello World"));
+        }}
+      >
+        Make Yourself known
+      </Button>
       <div style={{ position: "fixed", textAlign: "right", right: 0, top: 0, padding: 10 }}>
         <Account
           address={address}
